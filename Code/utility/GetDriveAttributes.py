@@ -24,7 +24,7 @@ class GetDriveAttributes(object):
 		self.UNIDENTIFIED_MANUFACTURER = "Unidentified"
 		self.SMART_ATTR_HEADER_REGEX = re.compile(r'SMART \d+.*Raw Value.*', re.I)
 		self.SMART_ATTR_DRIVE_LIST_REGEX = re.compile(r'Reported by drive models', re.I)
-		self.NON_TEXT_REGEX = re.compile(r'[^\w]')
+		self.NON_TEXT_REGEX = re.compile(r'^[^\w]|[^\w]$')
 
 	def __load_webpage(self):
 		"""Loads and parses the webpage
@@ -51,7 +51,7 @@ class GetDriveAttributes(object):
 		drives = map(lambda x: re.sub(self.NON_TEXT_REGEX, '', x), drives)
 		return drives
 
-	def __get_drive_manufacturer(self, drive_model):
+	def get_drive_manufacturer(self, drive_model):
 		"""Returns the manufacturer based on the drive model
 		Uses the initial signature of the model to identify the manufacturer
 
@@ -105,7 +105,7 @@ class GetDriveAttributes(object):
 
 		for _, drives_list in attr_to_drive_map.iteritems():
 			for drive in drives_list:
-				mfg = self.__get_drive_manufacturer(drive)
+				mfg = self.get_drive_manufacturer(drive)
 
 				if mfg not in drives_by_manufacturer:
 					drives_by_manufacturer[mfg] = set([])
@@ -133,7 +133,7 @@ class GetDriveAttributes(object):
 		for attr, drives in smart_attr_to_drive_list_map.iteritems():
 			for drive in drives:
 
-				mfg = self.__get_drive_manufacturer(drive)
+				mfg = self.get_drive_manufacturer(drive)
 				if mfg not in drive_attributes:
 					drive_attributes[mfg] = {}
 				
