@@ -1,0 +1,8 @@
+date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 11: Calibration_Retry_Count (Raw Value),Smart 200: Multi_Zone_Error_Rate (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value)
+2013-04-10,0,23,0,,,,,13443,,,,,,0,0,,,
+2013-04-11,0,23,0,,,,,13466,,,,,,0,0,,,
+2013-04-12,0,23,0,,,,,13484,,,,,,0,0,,,
+2013-04-13,0,23,0,,,,,13484,,,,,,0,0,,,
+2013-04-14,0,23,0,,,,,13484,,,,,,0,0,,,
+2013-04-15,0,23,0,,,,,13484,,,,,,0,0,,,
+2013-04-16,1,23,0,,,,,13484,,,,,,0,0,,,
