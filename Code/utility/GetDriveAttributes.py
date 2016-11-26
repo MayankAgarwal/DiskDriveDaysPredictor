@@ -108,9 +108,9 @@ class GetDriveAttributes(object):
 				mfg = self.__get_drive_manufacturer(drive)
 
 				if mfg not in drives_by_manufacturer:
-					drives_by_manufacturer[mfg] = []
+					drives_by_manufacturer[mfg] = set([])
 
-				drives_by_manufacturer[mfg].append(drive)
+				drives_by_manufacturer[mfg].add(drive)
 
 		return drives_by_manufacturer
 
