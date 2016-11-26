@@ -1,0 +1,13 @@
+date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 8: Seek_Time_Performance (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 2: Throughput_Performance (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value)
+2014-08-22,0,31,42,0,1,1,0,1,33,103,0,1,0,0,0,0,0,0
+2014-08-23,0,31,42,0,1,1,0,2,56,103,0,2,0,0,0,0,0,0
+2014-08-24,0,31,42,0,1,1,0,3,81,103,0,3,0,0,0,0,0,0
+2014-08-25,0,31,42,0,1,1,0,4,105,103,0,4,0,0,0,0,0,0
+2014-08-26,0,31,42,0,1,1,0,5,128,103,0,5,0,0,0,0,0,0
+2014-08-27,0,31,42,0,1,1,0,6,152,103,0,6,0,0,0,0,0,0
+2014-08-28,0,32,42,0,1,1,0,6,177,103,0,6,0,0,0,0,0,0
+2014-08-29,0,32,42,0,1,1,0,6,201,103,0,6,0,0,0,0,0,0
+2014-08-30,0,33,42,0,1,1,0,6,224,103,0,6,0,0,0,0,0,0
+2014-08-31,0,32,42,0,1,1,0,6,249,103,0,6,0,0,0,0,0,0
+2014-09-01,0,32,42,0,1,1,0,6,273,103,0,6,0,0,0,0,0,0
+2014-09-02,1,31,42,0,1,1,0,6,296,103,0,6,0,0,0,0,0,0

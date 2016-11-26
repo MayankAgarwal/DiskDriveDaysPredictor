@@ -101,7 +101,7 @@ class ProcessData(object):
 		"""
 
 		mfg = self.OBJ_DRIVE_ATTRIBUTES.get_drive_manufacturer(drive_model)
-		output_path = os.path.join(self.OUTPUT_DATA_PATH, mfg)
+		output_path = os.path.join(self.OUTPUT_DATA_PATH, mfg, drive_model)
 
 		if make_path:
 			self.__make_dirs(output_path)
