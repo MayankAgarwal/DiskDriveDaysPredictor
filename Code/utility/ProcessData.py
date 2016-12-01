@@ -3,6 +3,8 @@ from GetDriveAttributes import GetDriveAttributes
 import os
 import re
 import csv
+from datetime import datetime
+from datetime import timedelta
 
 class ProcessData(object):
 	"""
@@ -27,7 +29,7 @@ class ProcessData(object):
 		self.SMART_ATTR_TO_DRIVES, self.DRIVES_BY_MFG, self.DRIVE_ATTRS, self.MFG_REPORTS_SAME_ATTRS = \
 		self.OBJ_DRIVE_ATTRIBUTES.main()
 
-		self.PROCESS_MANUFACTURERS = ['HGST', 'Hitachi', 'Samsung', 'Toshiba', 'Western Digital']
+		self.PROCESS_MANUFACTURERS = ['HGST'] #['HGST', 'Hitachi', 'Samsung', 'Toshiba', 'Western Digital']
 		self.SMART_HEADER_REGEX = re.compile(r'(\d+)', re.I)
 		self.SMART_HEADER_FORMAT = "smart_<<NUM>>_raw"
 		
@@ -35,6 +37,8 @@ class ProcessData(object):
 		self.CSV_SERIAL_NO_COL = 'serial_number'
 		self.CSV_MODEL_COL = 'model'
 		self.CSV_FAILURE_COL = 'failure'
+
+		self.DATE_FORMAT = '%Y-%m-%d'
 
 		self.__visited_models = set([])
 		self.__to_visit_models = set([])
@@ -199,10 +203,88 @@ class ProcessData(object):
 
 			with open(output_filepath, 'w') as f:
 				writer = csv.writer(f)
-				writer.writerow(header)
+				temp_header, sno_data, temp = self.__update_data_to_include_classfication_output_labels(header, sno_data)
+				if temp:
+					print output_filepath
+				writer.writerow(temp_header)
 				writer.writerows(sno_data)
 
 		return output_folder
+
+	def __update_data_to_include_classfication_output_labels(self, headers, data):
+		"""Updates the processed data to also include the classficiation output labels:
+			1. op_fail_30 -> Will the drive fail in the next 30 days?
+			2. op_fail_15 -> Will the drive fail in the next 15 days?
+			3. op_fail_1 -> Will the drive fail in the next 1 day?
+
+		:param: headers List(str): the headers of the CSV data
+		:param: data : The data with each row representing a particular day and columns equals to headers
+
+		Returns:
+			headers List(str): Updated header values with classification labels included
+			data List : Updated data to also include the classification labels
+		"""
+		temp = False
+		fail_30, fail_15, fail_1 = timedelta(30), timedelta(15), timedelta(1)
+		headers = list(headers)
+		data = list(data)
+		headers.extend(['op_fail_30', 'op_fail_15', 'op_fail_1'])
+
+		date_index = headers.index(self.CSV_DATE_COL)
+		fail_index = headers.index(self.CSV_FAILURE_COL)
+
+		# Update date column to datetime object
+		for datum in data:
+			datum[date_index] = self.__parse_date(datum[date_index])
+
+		i = 0
+		for datum in data:
+			try:
+				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_30) and (int(x[fail_index]) == 1), data[i:])))
+				if datum[-1]:
+					temp = True
+				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_15) and (int(x[fail_index]) == 1), data[i:])))
+				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_1) and (int(x[fail_index]) == 1), data[i:])))
+			except Exception as err:
+				print err
+			finally:
+				i += 1
+				datum[date_index] = self.__format_date(datum[date_index])
+
+		return headers, data, temp
+
+	def __parse_date(self, date_str):
+		"""Parses string date and returns a datetime object
+
+		:param: date_str (String): String representing date
+
+		Returns:
+			date (datetime obj): Date time object of the date
+		"""
+
+		try:
+			date_obj = datetime.strptime(date_str, self.DATE_FORMAT)
+		except Exception as _:
+			return None
+		else:
+			return date_obj
+
+	def __format_date(self, date_obj):
+		"""Formats datetime object date into a string format
+
+		:param: date_obj (datetime object): Datetime object of the date to be formatted into string
+
+		Returns:
+			date (string): String formatted date
+		"""
+
+		try:
+			date_str = datetime.strftime(date_obj, self.DATE_FORMAT)
+		except Exception as _:
+			return None
+		else:
+			return date_str
+
 
 
 	def main(self):
@@ -221,7 +303,7 @@ class ProcessData(object):
 
 				model_data, model_header = {}, []
 
-				for csv_file in csv_filelist:
+				for csv_file in csv_filelist[0:500]:
 
 					print "Reading %s model data from file %s" % (drive_model, csv_file)
 
