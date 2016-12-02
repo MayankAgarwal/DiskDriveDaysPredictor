@@ -1,9 +1,9 @@
-date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 11: Calibration_Retry_Count (Raw Value),Smart 200: Multi_Zone_Error_Rate (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value)
-2013-04-18,0,26,0,,,,,13,,,,,,0,0,,,
-2013-04-19,0,25,0,,,,,37,,,,,,0,0,,,
-2013-04-20,0,24,543,,,,,61,,,,,,0,12,,,
-2013-04-21,0,25,1070,,,,,85,,,,,,0,17,,,
-2013-04-22,0,26,1557,,,,,109,,,,,,0,17,,,
-2013-04-23,0,22,1557,,,,,133,,,,,,0,17,,,
-2013-04-24,0,22,1557,,,,,157,,,,,,0,17,,,
-2013-04-25,1,21,1791,,,,,181,,,,,,0,17,,,
+date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 11: Calibration_Retry_Count (Raw Value),Smart 200: Multi_Zone_Error_Rate (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value),op_fail_30,op_fail_15,op_fail_1
+2013-04-18,0,26,0,,,,,13,,,,,,0,0,,,,True,True,False
+2013-04-19,0,25,0,,,,,37,,,,,,0,0,,,,True,True,False
+2013-04-20,0,24,543,,,,,61,,,,,,0,12,,,,True,True,False
+2013-04-21,0,25,1070,,,,,85,,,,,,0,17,,,,True,True,False
+2013-04-22,0,26,1557,,,,,109,,,,,,0,17,,,,True,True,False
+2013-04-23,0,22,1557,,,,,133,,,,,,0,17,,,,True,True,False
+2013-04-24,0,22,1557,,,,,157,,,,,,0,17,,,,True,True,True
+2013-04-25,1,21,1791,,,,,181,,,,,,0,17,,,,True,True,True

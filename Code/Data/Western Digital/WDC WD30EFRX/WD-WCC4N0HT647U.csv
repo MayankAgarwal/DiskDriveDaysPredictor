@@ -1,14 +1,14 @@
-date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 11: Calibration_Retry_Count (Raw Value),Smart 200: Multi_Zone_Error_Rate (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value)
-2015-10-01,0,21,0,1,1,0,0,10,0,1,0,0,0,0,0,0,0,0
-2015-10-02,0,21,0,1,1,0,0,33,0,1,0,0,0,0,0,0,0,0
-2015-10-03,0,21,0,1,1,0,0,58,0,1,0,0,0,0,0,0,0,0
-2015-10-04,0,20,0,1,1,0,0,82,0,1,0,0,0,0,0,0,0,0
-2015-10-05,0,21,0,1,1,0,0,105,0,2,0,0,0,0,0,0,0,0
-2015-10-06,0,20,0,1,1,0,0,129,0,2,0,0,0,0,0,0,0,0
-2015-10-07,0,21,0,1,1,0,0,153,0,2,0,0,0,0,0,0,0,0
-2015-10-08,0,20,0,1,1,0,0,178,0,2,0,0,0,0,0,0,0,0
-2015-10-09,0,20,0,1,1,0,0,201,0,2,0,0,0,0,0,0,0,0
-2015-10-10,0,20,0,1,1,0,0,225,0,2,0,0,0,0,0,0,0,0
-2015-10-11,0,20,0,1,1,0,0,249,0,3,0,0,0,0,0,0,0,0
-2015-10-12,0,20,0,1,1,0,0,273,0,3,0,0,0,0,0,0,0,0
-2016-06-30,0,25,0,9,9,0,6,492,0,185,4383,0,0,0,0,0,0,0
+date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 11: Calibration_Retry_Count (Raw Value),Smart 200: Multi_Zone_Error_Rate (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value),op_fail_30,op_fail_15,op_fail_1
+2015-10-01,0,21,0,1,1,0,0,10,0,1,0,0,0,0,0,0,0,0,False,False,False
+2015-10-02,0,21,0,1,1,0,0,33,0,1,0,0,0,0,0,0,0,0,False,False,False
+2015-10-03,0,21,0,1,1,0,0,58,0,1,0,0,0,0,0,0,0,0,False,False,False
+2015-10-04,0,20,0,1,1,0,0,82,0,1,0,0,0,0,0,0,0,0,False,False,False
+2015-10-05,0,21,0,1,1,0,0,105,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-06,0,20,0,1,1,0,0,129,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-07,0,21,0,1,1,0,0,153,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-08,0,20,0,1,1,0,0,178,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-09,0,20,0,1,1,0,0,201,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-10,0,20,0,1,1,0,0,225,0,2,0,0,0,0,0,0,0,0,False,False,False
+2015-10-11,0,20,0,1,1,0,0,249,0,3,0,0,0,0,0,0,0,0,False,False,False
+2015-10-12,0,20,0,1,1,0,0,273,0,3,0,0,0,0,0,0,0,0,False,False,False
+2016-06-30,0,25,0,9,9,0,6,492,0,185,4383,0,0,0,0,0,0,0,False,False,False

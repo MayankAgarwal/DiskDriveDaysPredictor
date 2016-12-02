@@ -29,7 +29,7 @@ class ProcessData(object):
 		self.SMART_ATTR_TO_DRIVES, self.DRIVES_BY_MFG, self.DRIVE_ATTRS, self.MFG_REPORTS_SAME_ATTRS = \
 		self.OBJ_DRIVE_ATTRIBUTES.main()
 
-		self.PROCESS_MANUFACTURERS = ['HGST'] #['HGST', 'Hitachi', 'Samsung', 'Toshiba', 'Western Digital']
+		self.PROCESS_MANUFACTURERS = ['HGST', 'Hitachi', 'Samsung', 'Toshiba', 'Western Digital']
 		self.SMART_HEADER_REGEX = re.compile(r'(\d+)', re.I)
 		self.SMART_HEADER_FORMAT = "smart_<<NUM>>_raw"
 		
@@ -203,9 +203,7 @@ class ProcessData(object):
 
 			with open(output_filepath, 'w') as f:
 				writer = csv.writer(f)
-				temp_header, sno_data, temp = self.__update_data_to_include_classfication_output_labels(header, sno_data)
-				if temp:
-					print output_filepath
+				temp_header, sno_data = self.__update_data_to_include_classfication_output_labels(header, sno_data)
 				writer.writerow(temp_header)
 				writer.writerows(sno_data)
 
@@ -224,7 +222,7 @@ class ProcessData(object):
 			headers List(str): Updated header values with classification labels included
 			data List : Updated data to also include the classification labels
 		"""
-		temp = False
+
 		fail_30, fail_15, fail_1 = timedelta(30), timedelta(15), timedelta(1)
 		headers = list(headers)
 		data = list(data)
@@ -241,8 +239,6 @@ class ProcessData(object):
 		for datum in data:
 			try:
 				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_30) and (int(x[fail_index]) == 1), data[i:])))
-				if datum[-1]:
-					temp = True
 				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_15) and (int(x[fail_index]) == 1), data[i:])))
 				datum.append(bool(filter(lambda x: (x[date_index] <= datum[date_index] + fail_1) and (int(x[fail_index]) == 1), data[i:])))
 			except Exception as err:
@@ -251,7 +247,7 @@ class ProcessData(object):
 				i += 1
 				datum[date_index] = self.__format_date(datum[date_index])
 
-		return headers, data, temp
+		return headers, data
 
 	def __parse_date(self, date_str):
 		"""Parses string date and returns a datetime object
@@ -303,7 +299,7 @@ class ProcessData(object):
 
 				model_data, model_header = {}, []
 
-				for csv_file in csv_filelist[0:500]:
+				for csv_file in csv_filelist:
 
 					print "Reading %s model data from file %s" % (drive_model, csv_file)
 

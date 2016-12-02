@@ -1,11 +1,11 @@
-date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 8: Seek_Time_Performance (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 2: Throughput_Performance (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value)
-2014-06-19,0,32,42,0,3,3,0,4,32,103,0,4,0,4,0,0,0,4
-2014-06-20,0,32,42,0,3,3,0,5,57,103,0,5,0,4,0,0,0,4
-2014-06-21,0,33,42,0,3,3,0,6,80,103,0,6,0,4,0,0,0,4
-2014-06-22,0,32,42,72090603,3,3,0,7,104,103,0,7,0,88,0,0,0,88
-2014-06-23,0,32,42,70059057,3,3,0,8,129,103,0,8,0,221,8,0,0,221
-2014-06-24,0,32,42,82052299,3,3,0,9,153,103,0,9,0,272,16,0,0,272
-2014-06-25,0,33,42,83100876,3,3,0,10,176,103,0,10,0,301,16,0,0,301
-2014-06-26,0,33,42,63636562,3,3,0,10,200,103,0,10,0,301,16,0,0,301
-2014-06-27,0,33,42,68944813,3,3,0,12,225,103,0,12,0,302,32,0,0,302
-2014-06-28,1,33,42,70386721,3,3,0,12,248,103,0,12,0,314,96,0,0,314
+date,failure,Smart 194: Temperature_Celsius (Raw Value),Smart 8: Seek_Time_Performance (Raw Value),Smart 1: Raw_Read_Error_Rate (Raw Value),Smart 12: Power_Cycle_Count (Raw Value),Smart 4: Start_Stop_Count (Raw Value),Smart 10: Spin_Retry_Count (Raw Value),Smart 192: Power-Off_Retract_Count (Raw Value),Smart 9: Power_On_Hours (Raw Value),Smart 2: Throughput_Performance (Raw Value),Smart 7: Seek_Error_Rate (Raw Value),Smart 193: Load_Cycle_Count (Raw Value),Smart 3: Spin_Up_Time (Raw Value),Smart 5: Reallocated_Sector_Ct (Raw Value),Smart 197: Current_Pending_Sector (Raw Value),Smart 198: Offline_Uncorrectable (Raw Value),Smart 199: UDMA_CRC_Error_Count (Raw Value),Smart 196: Reallocated_Event_Count (Raw Value),op_fail_30,op_fail_15,op_fail_1
+2014-06-19,0,32,42,0,3,3,0,4,32,103,0,4,0,4,0,0,0,4,True,True,False
+2014-06-20,0,32,42,0,3,3,0,5,57,103,0,5,0,4,0,0,0,4,True,True,False
+2014-06-21,0,33,42,0,3,3,0,6,80,103,0,6,0,4,0,0,0,4,True,True,False
+2014-06-22,0,32,42,72090603,3,3,0,7,104,103,0,7,0,88,0,0,0,88,True,True,False
+2014-06-23,0,32,42,70059057,3,3,0,8,129,103,0,8,0,221,8,0,0,221,True,True,False
+2014-06-24,0,32,42,82052299,3,3,0,9,153,103,0,9,0,272,16,0,0,272,True,True,False
+2014-06-25,0,33,42,83100876,3,3,0,10,176,103,0,10,0,301,16,0,0,301,True,True,False
+2014-06-26,0,33,42,63636562,3,3,0,10,200,103,0,10,0,301,16,0,0,301,True,True,False
+2014-06-27,0,33,42,68944813,3,3,0,12,225,103,0,12,0,302,32,0,0,302,True,True,True
+2014-06-28,1,33,42,70386721,3,3,0,12,248,103,0,12,0,314,96,0,0,314,True,True,True
